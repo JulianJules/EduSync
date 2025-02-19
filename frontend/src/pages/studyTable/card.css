@@ -1,0 +1,41 @@
+/* Time column styling */
+.hour-cell {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+/* Event card styling */
+.schedule-card {
+  background-color: #f1f1f1;
+  /* border: 1px solid #ccc;
+  border-radius: 8px; */
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-card:hover {
+  background-color: #e2e2e2;
+}
+
+.event-details {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.event-name {
+  font-weight: bold;
+}
+
+.event-time {
+  color: #555;
+}
+
+.event-description {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #777;
+}

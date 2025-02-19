@@ -1,0 +1,331 @@
+/* Prevent page from scrolling */
+html, body {
+  height: 100%; /* Ensure the body takes full height of the viewport */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Disable both vertical and horizontal scrolling */
+}
+
+/* Study Timetable Page Container */
+.StudyTimetable-page {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter transparent background */
+  color: #333; /* Dark text for better contrast */
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Prevent overflow in the container */
+}
+
+/* Hover effect */
+.StudyTimetable-page:hover {
+  transform: translateY(-10px);
+}
+
+/* Table Scroll Container */
+.table-container {
+  max-height: 500px; /* Ensure the table has a maximum height */
+  overflow-y: auto; /* Enable scrolling within the table container */
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  table-layout: fixed; /* Helps keep the layout consistent */
+  overflow-x: hidden; /* Allows horizontal scroll if content overflows */
+  overflow-y: auto; /* Prevents vertical overflow */
+  border-collapse: collapse; /* Cleaner table border */
+  background-color: #fff; /* Lighter background for table */
+  color: #333; /* Dark text for table content */
+}
+
+/* Table Header Styling */
+th {
+  background-color: #007BFF; /* Blue background for table header */
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+/* Border only for time column */
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Add vertical borders only for time column (first column) */
+td:first-child {
+  border-left: 1px solid #444;
+}
+
+/* Add a bottom border for rows in the body */
+tbody tr {
+  border-bottom: 0px solid #444;
+}
+
+/* Optional: Add border on the right for day cells */
+td {
+  border-right: 1px solid #444;
+}
+
+/* Make the time column look distinct (optional) */
+th {
+  border-right: 1px solid #444;
+}
+/* Cell Styling */
+td {
+  background-color: #f8f8f8; /* Light gray background for cells */
+  color: #333; /* Dark text for readability */
+  font-size: 14px;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff; /* White background for input */
+  color: #333; /* Dark text */
+}
+
+/* Focused Input */
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007BFF; /* Blue border on focus to match the home page */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow */
+}
+
+/* Styling for the expandable input field */
+input[type="text"].expandable {
+  height: 40px;
+  transition: height 0.3s ease;
+}
+
+/* Textarea Styling */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff; /* White background for textarea */
+  color: #333; /* Dark text */
+}
+
+/* Expanded Input Field */
+.expanded-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.expanded-input textarea {
+  font-size: 16px;
+  padding: 20px;
+  min-height: 150px;
+  width: 90%;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling for Study Timetable */
+.study-navbar {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow for the navbar */
+}
+
+.study-navbar nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.study-navbar nav ul li {
+  margin: 0 20px;
+}
+
+.study-navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.study-navbar nav ul li a:hover {
+  background-color: #444; /* Darker background when hovered */
+  border-radius: 5px;
+}
+
+/* Body and Container Adjustments */
+body, .study-timetable-container {
+  height: 100%; /* Ensure it fills the screen */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.study-timetable-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is evenly spaced */
+  height: 100%; /* Ensure full screen height */
+}
+
+/* Floating Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* Ensure it's above other elements */
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+/* Chat Window Styling */
+.chat-window {
+  position: fixed;
+  bottom: 80px; /* Just above the chat button */
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10000;
+}
+
+/* Header for chat window */
+.chat-header {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Message Container */
+.chat-messages {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+  font-size: 14px;
+  max-height: 300px;
+}
+
+/* User and Bot Message Styles */
+.chat-message {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #007BFF;
+  color: white;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background-color: #e0e0e0;
+  color: #333;
+  align-self: flex-start;
+}
+
+/* Input and Send Button */
+.chat-input-container {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.chat-send-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.chat-send-button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+

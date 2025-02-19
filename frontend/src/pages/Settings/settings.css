@@ -1,0 +1,228 @@
+/* General Styles */
+body, html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Same background color as home */
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Body Styles for Settings Page */
+.bodySetting {
+  height: 100vh;
+  background: #f4f4f9; /* Matching background from the home page */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Settings Page Container */
+.Settings-page {
+  background-color: #fff; /* White background similar to home page sections */
+  color: #333; /* Dark text color for readability */
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for subtle floating effect */
+  transition: transform 0.3s ease;
+}
+
+.Settings-page:hover {
+  transform: translateY(-10px); /* Hover effect for floating look */
+}
+
+/* Tab Navigation Styles */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #333; /* Dark text */
+  background-color: #fff; /* White background for tab buttons */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #007BFF; /* Matching the Home Page blue */
+  color: #fff;
+}
+
+.tab-button.active {
+  background-color: #007BFF; /* Active tab blue color */
+  color: #fff; /* Active text color */
+}
+
+.tab-content {
+  width: 100%;
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: block;
+  padding: 20px;
+  background-color: #f4f4f9; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Fields Styles */
+.Settings-input {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.Settings-input input {
+  width: 100%;
+  padding: 10px 15px;
+  color: #333; /* Dark text for better readability */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.Settings-input input:focus {
+  border-color: #007BFF; /* Blue border on focus */
+}
+
+/* Labels for Input Fields */
+.Settings-input label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888; /* Light gray labels */
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Hide label when input has text or is focused */
+.Settings-input input:valid + .Settings-label,
+.Settings-input input:focus + .Settings-label {
+  display: none;
+}
+
+/* Button Styles */
+.buttonSettings {
+  width: 100%;
+  padding: 15px;
+  background-color: #007BFF; /* Blue background for buttons */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonSettings:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white;
+}
+
+.buttonSettings:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Notification Preferences */
+.notification-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.notification-toggle label {
+  font-size: 16px;
+  color: #333; /* Dark text for labels */
+}
+
+.notification-toggle input[type="checkbox"] {
+  accent-color: #007BFF; /* Blue accent color for the checkbox */
+  transform: scale(1.2);
+}
+
+/* Page Navigation Buttons */
+.page-nav-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.page-nav-buttons button {
+  padding: 12px 18px;
+  background-color: #007BFF; /* Matching blue for navigation buttons */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-nav-buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.page-nav-buttons button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 500px) {
+  .Settings-page {
+    padding: 20px;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .buttonSettings {
+    font-size: 14px;
+  }
+
+  .Settings-input input {
+    font-size: 14px;
+  }
+
+  .Settings-input label {
+    font-size: 14px;
+  }
+
+  .page-nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+
+  

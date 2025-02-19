@@ -1,0 +1,136 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+  backdrop-filter: blur(5px); /* Subtle blur effect for background */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #222; /* Slightly lighter black for contrast */
+  color: white;
+  padding: 30px;
+  border-radius: 15px; /* Larger radius for a softer look */
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #4CAF50; /* Highlighted green for the heading */
+}
+
+/* Task List */
+.task-list {
+  margin-bottom: 20px;
+  max-height: 200px; /* Limit height to prevent overflow */
+  overflow-y: auto; /* Enable scrolling for long lists */
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.task-item {
+  background-color: #444;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* Align content nicely */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.task-item .assignment {
+  color: #4CAF50; /* Green for assignments */
+  font-weight: bold;
+}
+
+.task-item .quiz {
+  color: #FF5722; /* Red for quizzes */
+  font-weight: bold;
+}
+
+/* Input Fields */
+.task-input {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Adjust for smaller screens */
+  gap: 10px;
+  justify-content: center; /* Center align the input fields */
+}
+
+.task-input input {
+  width: 100%;
+  max-width: 300px; /* Adjust input field width */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #333; /* Consistent background with the modal */
+  color: white;
+}
+
+.task-input input:focus {
+  outline: none;
+  border: 1px solid #4CAF50; /* Green border for focus */
+}
+
+.task-input button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Close Button */
+.close-btn {
+  margin-top: 20px;
+  background-color: #FF3D00; /* Red for close button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #c13000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  
+  

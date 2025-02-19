@@ -1,0 +1,195 @@
+/* Body Styles */
+.bodyS {
+  height: 100vh;
+  background: linear-gradient(135deg, #a2c2e5, #d4e0f3); /* Retain home page gradient */
+  font-family: "Inria Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Signup Page Container */
+.Signup-page {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+  color: #333; /* Dark text for better contrast */
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 400px; /* Max width for better mobile view */
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.Signup-page:hover {
+  transform: translateY(-10px); /* Hover effect for floating look */
+}
+
+/* Form Fields Styles */
+.Signup-email,
+.Signup-password,
+.confirm-password {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.Signup-email input,
+.Signup-password input,
+.confirm-password input {
+  width: 100%;
+  padding: 10px 15px;
+  color: #333; /* Dark text */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background: #f4f4f9; /* Light background for input */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.Signup-email input:focus,
+.Signup-password input:focus,
+.confirm-password input:focus {
+  border-color: #007BFF; /* Blue border on focus to match the home page */
+}
+
+/* Labels */
+.Signup-email label,
+.Signup-password label,
+.confirm-password label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #bbb;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Hide label when input has text or is focused */
+.Signup-email input:valid + .S-label-email,
+.Signup-password input:valid + .S-label-password,
+.confirm-password input:valid + .S-label-password2,
+.Signup-email input:focus + .S-label-email,
+.Signup-password input:focus + .S-label-password,
+.confirm-password input:focus + .S-label-password2 {
+  display: none; /* Completely hide the label */
+}
+
+/* Focus/Valid Animation for Labels */
+.Signup-name input:valid + .S-label-name .S-content-name,
+.Signup-email input:focus + .S-label-email .S-content-email,
+.Signup-email input:valid + .S-label-email .S-content-email,
+.Signup-password input:focus + .S-label-password .S-content-password,
+.Signup-password input:valid + .S-label-password .S-content-password,
+.confirm-password input:focus + .S-label-password2 .S-re-content-password {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #007BFF; /* Blue color for labels when focused/valid */
+}
+
+.Signup-email input:focus + .S-label-email::after,
+.Signup-password input:focus + .S-label-password::after,
+.confirm-password input:focus + .S-label-password2::after {
+  transform: translateX(0%);
+}
+
+/* Password Eye Icon */
+.eye-password,
+.eye-password2 {
+  position: absolute;
+  top: 55%;
+  right: -15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #bbb; /* Light gray */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.eye-password:hover,
+.eye-password2:hover {
+  color: #007BFF; /* Blue color for hover */
+}
+
+/* Button Styles */
+.buttonSU {
+  width: 100%;
+  padding: 15px;
+  background-color: #007BFF; /* Blue button to match home page */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttonSU:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  opacity: 0.9;
+}
+
+.buttonSU:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Link Styles */
+.link_SU {
+  text-decoration: none;
+  color: #007BFF; /* Blue link */
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.link_SU:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 500px) {
+  .Signup-page {
+    padding: 20px;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .buttonSU {
+    font-size: 14px;
+  }
+
+  .Signup-email input,
+  .Signup-password input,
+  .confirm-password input {
+    font-size: 14px;
+  }
+
+  .S-content-email,
+  .S-content-name,
+  .S-content-password {
+    font-size: 14px;
+  }
+}
+
+
+
