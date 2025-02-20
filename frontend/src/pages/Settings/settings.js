@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar'; // Import the Navbar component
 import './settings.css'; // Import styles for Settings
-import OneSignal from "react-onesignal"; // Import OneSignal
 import axios from "axios";
 
 

@@ -9,7 +9,6 @@ import Settings from './pages/Settings/settings';
 import Home from './pages/Home/home'
 import Dashboard from './pages/Dashboard/dashboard';
 import Calendar from './pages/Calendar/calendar';
-import OneSignal from 'react-onesignal';
 
 // useEffect(() => {
 //   if ('serviceWorker' in navigator && 'PushManager' in window) {
