@@ -4,9 +4,9 @@ Overview
 
 Student Helper AI is a full-stack web application designed to assist students in managing their academic and personal lives. It includes features such as a chatbot with real-time responses, a dynamic study timetable, a habit tracker, and words of affirmation to support students' well-being.
 
-Tech Stack
+## Tech Stack
 
-Frontend
+### Frontend
 
 React.js: A modern JavaScript library for building dynamic user interfaces.
 
@@ -16,7 +16,7 @@ localStorage: Enables data persistence for user settings and preferences.
 
 Server-Sent Events (SSE): Implements real-time chatbot responses.
 
-Backend
+### Backend
 
 Node.js & Express.js: Provides a robust and scalable server-side framework.
 
@@ -32,7 +32,7 @@ Rate Limiting: Protects against abuse by limiting the number of API requests per
 
 HTTPS with SSL Certificates: Ensures secure communication between client and server.
 
-Features
+#### Features
 
 Words of Affirmation: Encouraging messages sent via notifications or chatbot.
 
@@ -44,9 +44,9 @@ Daily/Weekly Planner: Schedules tasks, assignments, and exams with prioritizatio
 
 Chatbot: Provides real-time student support and guidance.
 
-Installation
+## Installation
 
-Prerequisites
+#### Prerequisites
 
 Ensure you have the following installed on your system:
 
@@ -56,7 +56,7 @@ MongoDB Atlas account
 
 OpenAI API key (if required for AI responses)
 
-Steps
+#### Steps
 
 Clone the repository
 
