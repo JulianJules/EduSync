@@ -61,6 +61,7 @@ OpenAI API key (if required for AI responses)
 ##### Clone the repository
 
 git clone https://github.com/JulianJules/EdySync.git
+
 cd student-helper-ai
 
 ##### Install dependencies
@@ -77,7 +78,7 @@ MONGO_URI=your_mongodb_uri
 
 npm start
 
-Run the frontend
+##### Run the frontend
 Navigate to the frontend directory and start React:
 
 cd frontend
