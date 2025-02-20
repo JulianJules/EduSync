@@ -58,22 +58,22 @@ OpenAI API key (if required for AI responses)
 
 #### Steps
 
-Clone the repository
+##### Clone the repository
 
 git clone https://github.com/JulianJules/EdySync.git
 cd student-helper-ai
 
-Install dependencies
+##### Install dependencies
 
 npm install
 
-Set up environment variables
+##### Set up environment variables
 Create a .env file in the root directory and add:
 
 PORT=your_port
 MONGO_URI=your_mongodb_uri
 
-Start the backend server
+##### Start the backend server
 
 npm start
 
