@@ -60,7 +60,7 @@ OpenAI API key (if required for AI responses)
 
 Clone the repository
 
-git clone [https://github.com/yourusername/student-helper-ai.git](https://github.com/JulianJules/EdySync.git)
+git clone https://github.com/JulianJules/EdySync.git
 cd student-helper-ai
 
 Install dependencies
