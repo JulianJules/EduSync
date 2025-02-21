@@ -56,13 +56,15 @@ MongoDB Atlas account.
 
 OpenAI API key (if required for AI responses).
 
+Certification & Key File for HTTPS
+
 #### Steps
 
 ##### Clone the repository
 
-git clone https://github.com/JulianJules/EdySync.git
+git clone https://github.com/JulianJules/EduSync.git
 
-cd student-helper-ai.
+cd EdySync.
 
 ##### Install dependencies
 
