@@ -20,7 +20,7 @@ Server-Sent Events (SSE): Implements real-time chatbot responses.
 
 Node.js & Express.js: Provides a robust and scalable server-side framework.
 
-MongoDB (Atlas): NoSQL database for storing user data and chatbot interactions.
+MongoDB (Atlas): NoSQL database for storing user data.
 
 JWT HTTPOnly Cookies: Secure user authentication and session management.
 
@@ -28,15 +28,9 @@ Helmet.js: Enhances security by setting HTTP headers appropriately.
 
 CORS: Enables secure cross-origin requests.
 
-Rate Limiting: Protects against abuse by limiting the number of API requests per minute.
-
 HTTPS with SSL Certificates: Ensures secure communication between client and server.
 
 #### Features
-
-Words of Affirmation: Encouraging messages sent via notifications or chatbot.
-
-Events Manager: Displays school and personal events in chronological order.
 
 Habit Tracker: AI-suggested or user-defined habits with progress tracking.
 
