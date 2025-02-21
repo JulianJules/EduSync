@@ -64,7 +64,7 @@ Certification & Key File for HTTPS
 
 git clone https://github.com/JulianJules/EduSync.git
 
-cd EdySync
+cd EduSync
 
 ##### Install backend dependencies
 
@@ -72,12 +72,11 @@ cd backend
 
 npm install
 
-npm install nodemon (if not available)
+npm install nodemon 
 
-npm install openssl (If not available)
+##### Set up backend environment variables
 
-##### Set up environment variables
-Create a backend .env file in the backend folder
+Create a .env file in the backend folder
 
 PORT=your_port
 
@@ -85,7 +84,7 @@ MONGO_URI=your_mongodb_uri
 
 ACCESS_TOKEN_SECRET=random_sha256 value
 
-#### Set up certification & key files (MAC)
+#### Set up certification & key files (MAC & Linux)
 
 In the backend folder:
 
@@ -97,14 +96,15 @@ openssl genrsa -out localhost-key.pem
 
 openssl req -new -key localhost-key.pem -out localhost-csr.pem
 
+> When filling out the information, you need to provide one information. When using localhost use must fill out Common Name: localhost
+
 openssl x509 -req -days 365 -in localhost-csr.pem -signkey localhost-key.pem -out localhost-cert.pem
 
 
-When filling out the information, you need to provide one information
+##### Browser to trust the Self Signed Certificate (MAC Only)
+Go into keychain Access, press on System and then certificates. Find the localhost certificate and Always Trust.
 
-When using localhost use must fill out Common Name: localhost
-
-Go into keychain Access, press on System and then certificates. Find the localhost certificate and Always Trust
+> It won’t affect the website, but it will remove the "Not Secure" label when accessing it.
 
 ##### Start the backend server
 
@@ -112,23 +112,25 @@ npm run dev
 
 #### Run the frontend
 
-Make a new terminal
+Make a new terminal in VS Code
+
+###### Navigate to the frontend directory:
 
 cd frontend
 
 npm install
 
-##### Set up environment variables
+##### Set up frontend environment variables
 
-Create a backend .env file in the frontend folder if you have HTTPS Setup
+Create a .env file in the frontend folder
 
 HTTPS=true
 
-SSL_CRT_FILE= (Directory Path of the localhost-cert.pem)
+SSL_CRT_FILE= ../backend/cert/localhost-cert.pem
 
-SSL_KEY_FILE= (Directory Path of the localhost-key.pem)
+SSL_KEY_FILE= ../backend/cert/localhost-cert.pem
 
-Navigate to the frontend directory and start React:
+###### Navigate to the frontend directory and start React:
 
 cd frontend
 
