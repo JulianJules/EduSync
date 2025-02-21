@@ -2,7 +2,7 @@
 
 Overview
 
-Student Helper AI is a full-stack web application designed to assist students in managing their academic and personal lives. It includes features such as a chatbot with real-time responses, a dynamic study timetable, a habit tracker, and words of affirmation to support students' well-being.
+EduSync is a full-stack web application designed to assist students in managing their academic lives. It includes features such as a chatbot with real-time responses, a dynamic study timetable, a habit tracker, and words of affirmation to support students' well-being.
 
 ## Tech Stack
 
