@@ -66,7 +66,9 @@ git clone https://github.com/JulianJules/EduSync.git
 
 cd EdySync
 
-##### Install dependencies
+##### Install backend dependencies
+
+cd backend
 
 npm install
 
@@ -109,6 +111,12 @@ Go into keychain Access, press on System and then certificates. Find the localho
 npm run dev
 
 #### Run the frontend
+
+Make a new terminal
+
+cd frontend
+
+npm install
 
 ##### Set up environment variables
 
