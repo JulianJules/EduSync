@@ -50,11 +50,11 @@ Chatbot: Provides real-time student support and guidance.
 
 Ensure you have the following installed on your system:
 
-Node.js & npm
+Node.js & npm.
 
-MongoDB Atlas account
+MongoDB Atlas account.
 
-OpenAI API key (if required for AI responses)
+OpenAI API key (if required for AI responses).
 
 #### Steps
 
@@ -62,7 +62,7 @@ OpenAI API key (if required for AI responses)
 
 git clone https://github.com/JulianJules/EdySync.git
 
-cd student-helper-ai
+cd student-helper-ai.
 
 ##### Install dependencies
 
@@ -71,16 +71,16 @@ npm install
 ##### Set up environment variables
 Create a .env file in the root directory and add:
 
-PORT=your_port
-MONGO_URI=your_mongodb_uri
+PORT=your_port.
+MONGO_URI=your_mongodb_uri.
 
 ##### Start the backend server
 
-npm start
+npm start.
 
 ##### Run the frontend
 Navigate to the frontend directory and start React:
 
-cd frontend
-npm start
+cd frontend.
+npm start.
 
